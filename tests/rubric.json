@@ -1,0 +1,18 @@
+{
+    "test_a_imports": {
+        "weight": "required",
+        "depends": []
+    },
+    "test_netid": {
+        "weight": "required",
+        "depends": []
+    },
+    "test_k_nearest_neighbors": {
+        "weight": 1,
+        "depends": []
+    },
+    "test": {
+        "weight": 1,
+        "depends": []
+    }
+}
