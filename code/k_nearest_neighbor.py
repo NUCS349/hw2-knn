@@ -15,6 +15,7 @@ class KNearestNeighbor():
 
         raise NotImplementedError()
 
+
     def fit(self, features, targets):
         """Fit features, a numpy array of size (n_samples, n_features).
         
@@ -25,6 +26,7 @@ class KNearestNeighbor():
         """
 
         raise NotImplementedError()
+        
 
     def predict(self, features):
         """Predict from features, a numpy array of size (n_samples, n_features) Use the
