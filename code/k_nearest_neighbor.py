@@ -3,8 +3,8 @@ import numpy as np
 class KNearestNeighbor():    
     def __init__(self, n_neighbors):
         """
-        K-Nearest Neighbor is a straightforward learning algorithm that can be highly
-        effective. The system is trained using labeled data. At test time, labels for
+        K-Nearest Neighbor is a straightforward algorithm that can be highly
+        effective. Training time is...well...is there any training? At test time, labels for
         new points are predicted by comparing them to the nearest neighbors in the
         training data.
 
