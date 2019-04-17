@@ -22,6 +22,9 @@ you get 4 points here.
  - 1) they implemented regression (not classification) as KNN. 
  - 2) They have an understanding of how to deal with missing data
  - 3) We've discussed collaborative filtering with them
+ - 4) They know what imputation is.
+#### I think this would require an additional lecture to cover that kind of material.
+ 
 
 6. (0.5 points) We will now perform KNN regression (or imputation) on the MovieLens dataset. The MovieLens dataset contains 100k ratings on 1682 movies given by 942 users. First, explore the MovieLens data. For each pair of users, what is the mean number of movies that two users have reviewed in common? What is the median number of movies that two reviewers have reviewed in common?
 
