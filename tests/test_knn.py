@@ -36,7 +36,7 @@ def test_aggregators():
         [-1, 1]
     ])
     _targets = np.array([
-        1, 1, 3, 4, 5
+        [1, 1, 3, 4, 5]
     ])
     aggregators = ['mean', 'mode', 'median']
     answers = [np.mean(targets), 1, np.median(targets)]

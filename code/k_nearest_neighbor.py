@@ -18,7 +18,20 @@ class KNearestNeighbor():
         ```aggregator``` lets you alter how a label is predicted for a data point based 
         on its neighbors. If it's set to `mean`, it is the mean of the labels of the
         neighbors. If it's set to `mode`, it is the mode of the labels of the neighbors.
-        If it is set to median, it is the median of the labels of the neighbors.
+        If it is set to median, it is the median of the labels of the neighbors. If the
+        number of dimensions returned in the label is more than 1, the aggregator is
+        applied to each dimension independently. For example, if the labels of 3 
+        closest neighbors are:
+            [
+                [1, 2, 3], 
+                [2, 3, 4], 
+                [3, 4, 5]
+            ] 
+        And the aggregator is 'mean', applied along each dimension, this will return for 
+        that point:
+            [
+                [2, 3, 4]
+            ]
 
         Arguments:
             n_neighbors {int} -- Number of neighbors to use for prediction.
@@ -36,12 +49,17 @@ class KNearestNeighbor():
     def fit(self, features, targets):
         """Fit features, a numpy array of size (n_samples, n_features). For a KNN, this
         function should store the features and corresponding targets in class 
-        variables that can be accessed in the `predict` function.
+        variables that can be accessed in the `predict` function. Note that targets can
+        be multidimensional! 
+        
+        HINT: One use case of KNN is for imputation, where the features and the targets 
+        are the same. See tests/test_collaborative_filtering for an example of this.
         
         Arguments:
             features {np.ndarray} -- Features of each data point, shape of (n_samples,
                 n_features).
-            targets {[type]} -- Target labels for each data point, shape of (n_samples,)
+            targets {[type]} -- Target labels for each data point, shape of (n_samples, 
+                n_dimensions).
         """
 
         raise NotImplementedError()
@@ -54,11 +72,14 @@ class KNearestNeighbor():
         test sample by comparing their feature vectors. The label for the test sample
         is the most common label among the K nearest neighbors in the training data.
 
+        Note that when using KNN for imputation, label has shame (1, n_features).
+
         Arguments:
             features {np.ndarray} -- Features of each data point, shape of (n_samples,
                 n_features).
 
         Returns:
-            labels {np.ndarray} -- Labels for each data point, of shape (n_samples,)
+            labels {np.ndarray} -- Labels for each data point, of shape (n_samples,
+                n_dimensions)
         """
         raise NotImplementedError()

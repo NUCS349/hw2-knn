@@ -33,8 +33,6 @@
     },
     "test_collaborative_filtering": {
         "weight": 2,
-        "depends": [
-            "test_load_movielens_data"
-        ]
+        "depends": []
     }
 }
