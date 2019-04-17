@@ -32,8 +32,17 @@ you get 4 points here.
 
 7. (0.5 points) We will build up a *collaborative filter* over the next few questions. Collaborative filters are essentially how recommendation algorithms work on sites like Amazon ("people who bought blank also bought blank") and Netflix ("you watched blank so you might also like blank"). They work by comparing distances between users. If two users are similar, then items that one user has seen and liked but the other hasn't seen are recommended to the other user. First, frame this problem as a KNN regression problem. What are the features? What is the output of the system? How can the neighbors of a user be used to impute that users rating for a movie they have not rated?
 
+#### What would constitute a correct answer for question 7? What would be an incorrect answer? What would the grading key look like for an undergrad grader?
+
 8.  (O.5 points) The effectiveness of a KNN regressor is affected by the value of K that you choose and the number of data points it has available. Use the MovieLens data set, which contains 100k points. Split it into 99000 training and 1000 testing points. Use a Euclidean distance measure for your regressor.  Now, fit the data using K = 1, K = 2, K = 4, K = 8. Which one performed best, as measured with sum-of-squared-errors on the testing set? Repeat the experiment with the testing and training set flipped. How did this change things?
+
+#### About question 8: Have you tried this and do you know the answer? Is there a difference? If not, how will we tell the graders what they should be seeing? Should we specify the test/train split ourselves, so we know what it should be? 
+
 
 9.  (0.5 points) The effectiveness of a KNN  regressor is affected by the distance measure chosen. Let's explore how changing the distance measure changees the effectiveness of a KNN regressor. Use the MovieLens dataset, using the best K found in the previous question. Split the data into 99000 training and 1000 testing points. Compare the performance of imputation, using a sum-of-squared-errors on the testing set, for the following distance measures: 'euclidean' (p=2), 'manhattan' (p=1), and 'cosine'. Which distance measure worked best? Why do you think so?
 
+#### About question 9. Did you try these and see that there was a difference? I know that we think there should be, but there's a difference between should and is.
+
 10. (0.5 points) The effectiveness of a KNN  regressor is affected by the aggregator chosen. Let's explore how changing the distance measure changees the effectiveness of a KNN regressor. Use the MovieLens dataset, using the best K found in the previous question. Split the data into 99000 training and 1000 testing points. Compare the performance of imputation, using a sum-of-squared-errors on the testing set, for the following aggregators: 'mean', 'median', and 'mode'. Which worked best? Why do you think so?
+
+#### On question 10: What do you mean by aggregator? What is the 'right' answer? 
