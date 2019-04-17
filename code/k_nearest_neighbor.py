@@ -2,7 +2,7 @@ import numpy as np
 from .distances import euclidean_distances, manhattan_distances, cosine_distances
 
 class KNearestNeighbor():    
-    def __init__(self, n_neighbors, distance_measure='euclidean'):
+    def __init__(self, n_neighbors, distance_measure='euclidean', aggregator='mode'):
         """
         K-Nearest Neighbor is a straightforward algorithm that can be highly
         effective. Training time is...well...is there any training? At test time, labels for
@@ -12,14 +12,21 @@ class KNearestNeighbor():
         ```distance_measure``` lets you switch between which distance measure you will
         use to compare data points. The behavior is as follows:
 
-        If 'euclideaen', use euclidean_distances, if 'manhattan', use manhattan_distances,
+        If 'euclidean', use euclidean_distances, if 'manhattan', use manhattan_distances,
         if  'cosine', use cosine_distances.
+
+        ```aggregator``` lets you alter how a label is predicted for a data point based 
+        on its neighbors. If it's set to `mean`, it is the mean of the labels of the
+        neighbors. If it's set to `mode`, it is the mode of the labels of the neighbors.
+        If it is set to median, it is the median of the labels of the neighbors.
 
         Arguments:
             n_neighbors {int} -- Number of neighbors to use for prediction.
             distance_measure {str} -- Which distance measure to use. Can be one of
                 'euclidean', 'manhattan', or 'cosine'. This is the distance measure
                 that will be used to compare features to produce labels. 
+            aggregator {str} -- How to aggregate a label across the `n_neighbors` nearest
+                neighbors. Can be one of 'mode', 'mean', or 'median'.
         """
         self.n_neighbors = n_neighbors
 
@@ -27,7 +34,9 @@ class KNearestNeighbor():
 
 
     def fit(self, features, targets):
-        """Fit features, a numpy array of size (n_samples, n_features).
+        """Fit features, a numpy array of size (n_samples, n_features). For a KNN, this
+        function should store the features and corresponding targets in class 
+        variables that can be accessed in the `predict` function.
         
         Arguments:
             features {np.ndarray} -- Features of each data point, shape of (n_samples,

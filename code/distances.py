@@ -43,19 +43,3 @@ def cosine_distances(X, Y):
         D {np.ndarray}: MxN matrix with Cosine distances between rows of X and rows of Y.
     """
     raise NotImplementedError()
-
-
-def pearson_distances(X, Y):
-    """Compute Pearson correlation distance between the rows of two matrices X (shape MxK) 
-    and Y (shape NxK). The output of this function is a matrix of shape MxN containing
-    the Pearson correlation distance between two rows.
-    
-    Arguments:
-        X {np.ndarray} -- First matrix, containing M examples with K features each.
-        Y {np.ndarray} -- Second matrix, containing N examples with K features each.
-
-    Returns:
-        D {np.ndarray}: MxN matrix with Pearson correlation distances between rows of X 
-            and rows of Y.
-    """
-    raise NotImplementedError()

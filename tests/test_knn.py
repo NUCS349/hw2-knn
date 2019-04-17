@@ -15,6 +15,7 @@ def xp_dataset_name(key):
         raise ValueError('Dataset ' + key + ' cannot be found')
     return dataset[0]
 
+
 def test_k_nearest_neighbor():
     accuracies = {}
     for data_path in datasets:
@@ -26,5 +27,23 @@ def test_k_nearest_neighbor():
         assert (acc > .99)
 
 
-def test_collaborative_filtering():
-    
+def test_aggregators():
+    _features = np.array([
+        [-1, 1],
+        [-1, 1],
+        [-1, 1],
+        [-1, 1],
+        [-1, 1]
+    ])
+    _targets = np.array([
+        1, 1, 3, 4, 5
+    ])
+    aggregators = ['mean', 'mode', 'median']
+    answers = [np.mean(targets), 1, np.median(targets)]
+    _est = []
+    for a in aggregators:
+        x = KNearestNeighbor(5, aggregator=a)
+        x.fit(_features, _targets)
+        y = x.predict(_features[0])
+        _est.append(y)
+    assert (np.allclose(_est, answers))
