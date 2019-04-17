@@ -110,3 +110,4 @@ solution/
 tests/test.csv
 data/*.png
 .DS_Store
+data/ml-100k

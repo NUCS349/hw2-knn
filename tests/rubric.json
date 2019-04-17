@@ -8,11 +8,29 @@
         "depends": []
     },
     "test_k_nearest_neighbors": {
+        "weight": 2,
+        "depends": []
+    },
+    "test_load_movielens_data": {
         "weight": 1,
         "depends": []
     },
-    "test": {
+    "test_euclidean_distances": {
         "weight": 1,
         "depends": []
+    },
+    "test_manhattan_distances": {
+        "weight": 1,
+        "depends": []
+    },
+    "test_cosine_distances": {
+        "weight": 1,
+        "depends": []
+    },
+    "test_collaborative_filtering": {
+        "weight": 2,
+        "depends": [
+            "test_load_movielens_data"
+        ]
     }
 }

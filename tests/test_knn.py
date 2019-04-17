@@ -17,7 +17,6 @@ def xp_dataset_name(key):
 
 def test_k_nearest_neighbor():
     accuracies = {}
-    print(datasets)
     for data_path in datasets:
         features, targets = load_json_data(data_path)
         model = KNearestNeighbor(1)
@@ -25,3 +24,7 @@ def test_k_nearest_neighbor():
         labels = model.predict(features)
         acc = accuracy(targets, labels)
         assert (acc > .99)
+
+
+def test_collaborative_filtering():
+    
