@@ -43,6 +43,6 @@ you get 4 points here.
 
 #### About question 9. Did you try these and see that there was a difference? I know that we think there should be, but there's a difference between should and is.
 
-10. (0.5 points) The effectiveness of a KNN  regressor is affected by the aggregator chosen. Let's explore how changing the distance measure changees the effectiveness of a KNN regressor. Use the MovieLens dataset, using the best K found in the previous question. Split the data into 99000 training and 1000 testing points. Compare the performance of imputation, using a sum-of-squared-errors on the testing set, for the following aggregators: 'mean', 'median', and 'mode'. Which worked best? Why do you think so?
+1.  (0.5 points) The effectiveness of a KNN  regressor is affected by the aggregator chosen. Let's explore how changing the distance measure changees the effectiveness of a KNN regressor. Use the MovieLens dataset, using the best K found in question 8 and the best distance measuure found in the previous question. Split the data into 99000 training and 1000 testing points. Compare the performance of imputation, using a sum-of-squared-errors on the testing set, for the following aggregators: 'mean', 'median', and 'mode'. Which worked best? Why do you think so?
 
 #### On question 10: What do you mean by aggregator? What is the 'right' answer? 
