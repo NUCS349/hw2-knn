@@ -1,5 +1,6 @@
 import numpy as np
 from code import load_movielens_data
+import os
 
 def test_load_movielens_data():
     data = load_movielens_data(
