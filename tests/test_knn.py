@@ -44,6 +44,6 @@ def test_aggregators():
     for a in aggregators:
         x = KNearestNeighbor(5, aggregator=a)
         x.fit(_features, _targets)
-        y = x.predict(_features[0])
+        y = x.predict(np.expand_dims(_features[0], 0))
         _est.append(y)
     assert (np.allclose(_est, answers))
