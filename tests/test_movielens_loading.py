@@ -4,6 +4,6 @@ import os
 
 def test_load_movielens_data():
     data = load_movielens_data(
-        os.path.join('..', 'data',  'ml-100k')
+        os.path.join('data',  'ml-100k')
     )
     assert (data.shape == (943, 1682))
