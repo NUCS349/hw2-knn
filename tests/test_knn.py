@@ -39,7 +39,7 @@ def test_aggregators():
         [1, 1, 3, 4, 5]
     ])
     aggregators = ['mean', 'mode', 'median']
-    answers = [np.mean(targets), 1, np.median(targets)]
+    answers = [np.mean(_targets), 1, np.median(_targets)]
     _est = []
     for a in aggregators:
         x = KNearestNeighbor(5, aggregator=a)
