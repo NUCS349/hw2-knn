@@ -5,8 +5,8 @@ import os
 
 def test_k_nearest_neighbor():
     datasets = [
-        os.path.join('../data', x)
-        for x in os.listdir('../data')
+        os.path.join('data', x)
+        for x in os.listdir('data')
         if os.path.splitext(x)[-1] == '.json'
     ]
 
