@@ -28,7 +28,7 @@ def test_k_nearest_neighbor():
 
                 # error if there's an issue
                 msg = 'Failure with dataset: {}. Settings: dist={}, agg={}.'.format(data_path, d, a)
-                assert (acc < 1.0), msg
+                assert (acc == 1.0), msg
 
 
 def test_aggregators():
