@@ -1,5 +1,5 @@
 import numpy as np 
-from code import KNearestNeighbor, load_movielens_data
+from code import collaborative_filtering
 
 def test_collaborative_filtering():
     user_ratings = np.array([
