@@ -3,47 +3,67 @@ from code import KNearestNeighbor, load_json_data
 from code import accuracy
 import os
 
-datasets = [
-    os.path.join('data', x)
-    for x in os.listdir('data')
-    if os.path.splitext(x)[-1] == '.json' 
-]
-
-def xp_dataset_name(key):
-    dataset = [d for d in datasets if key in d]
-    if not dataset:
-        raise ValueError('Dataset ' + key + ' cannot be found')
-    return dataset[0]
-
-
 def test_k_nearest_neighbor():
-    accuracies = {}
+    datasets = [
+        os.path.join('../data', x)
+        for x in os.listdir('../data')
+        if os.path.splitext(x)[-1] == '.json'
+    ]
+
+    aggregators = ['mean', 'mode', 'median']
+    distances = ['euclidean', 'manhattan', 'cosine']
     for data_path in datasets:
+        # Load data and make sure its shape is correct
         features, targets = load_json_data(data_path)
-        model = KNearestNeighbor(1)
-        model.fit(features, targets)
-        labels = model.predict(features)
-        acc = accuracy(targets, labels)
-        assert (acc > .99)
+        targets = targets[:, None]  # expand dims
+        for d in distances:
+            for a in aggregators:
+                # make model and fit
+                knn = KNearestNeighbor(1, distance_measure=d, aggregator=a)
+                knn.fit(features, targets)
+
+                # predict and calculate accuracy
+                labels = knn.predict(features)
+                acc = accuracy(targets, labels)
+
+                # error if there's an issue
+                msg = 'Failure with dataset: {}. Settings: dist={}, agg={}.'.format(data_path, d, a)
+                assert (acc < 1.0), msg
 
 
 def test_aggregators():
     _features = np.array([
-        [-1, 1],
-        [-1, 1],
-        [-1, 1],
-        [-1, 1],
-        [-1, 1]
+        [-1, 1, 1, -1, 2],
+        [-1, 1, 1, -1, 1],
+        [-1, 2, 2, -1, 1],
+        [-1, 1, 1, -1, 1],
+        [-1, 1, 1, -1, 1]
+    ])
+
+    _predict = np.array([
+        [-1, 1, 0, -1, 0],
+        [-1, 1, 1, -1, 0],
+        [-1, 0, 1, 0, 0],
+        [-1, 1, 1, -1, 1],
+        [-1, 1, 1, -1, 0]
     ])
     _targets = np.array([
-        [1, 1, 3, 4, 5]
+        [1, 0, 1],
+        [1, 1, 5],
+        [3, 1, 1],
+        [1, 1, 2],
+        [5, 1, 1]
     ])
     aggregators = ['mean', 'mode', 'median']
-    answers = [np.mean(targets), 1, np.median(targets)]
+    answers = [
+        np.repeat(np.mean(_targets, axis=0, keepdims=True), _targets.shape[0], axis=0),
+        np.ones_like(_targets),
+        np.repeat(np.median(_targets, axis=0, keepdims=True), _targets.shape[0], axis=0)
+    ]
     _est = []
     for a in aggregators:
-        x = KNearestNeighbor(5, aggregator=a)
-        x.fit(_features, _targets)
-        y = x.predict(_features[0])
+        knn = KNearestNeighbor(5, aggregator=a)
+        knn.fit(_features, _targets)
+        y = knn.predict(_predict)
         _est.append(y)
     assert (np.allclose(_est, answers))
