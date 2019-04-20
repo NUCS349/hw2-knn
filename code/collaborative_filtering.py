@@ -43,5 +43,9 @@ def collaborative_filtering(input_array, n_neighbors,
 
         aggregator {str} -- How to aggregate a label across the `n_neighbors` nearest
             neighbors. Can be one of 'mode', 'mean', or 'median'.
+
+    Returns:
+        imputed_array {np.ndarray} -- An array of shape (n_samples, n_features) with imputed
+            values for any zeros in the original input_array.
     """
     raise NotImplementedError()
