@@ -25,7 +25,7 @@ you get 4 points here.
 8.  (O.25 points) We will implement our collaborative filter on the MovieLens dataset. The process for this and the following questions is as follows (note the free parameters `N, K, D, A`):
     1.  For each user in MovieLens, take `N` ratings at random that are *known* (e.g. nonzero ratings) and replace them with 0. Save this altered data as a new matrix. Be sure to keep the original data around to evaluate your approach.
     2.  Use the `collaborative_filtering` function to impute values for this new matrix with `n_neighbors = K`, `distance_measure = D`, and `aggregator = A`. 
-    3.  We now wish to evaluate the quality of the collaborative filter. For each rating that you imputed, do: (original_rating - imputed_rating) ** 2. Take the mean of all of these, and then take the square root of that. More formally, this is the mean squared error evaluation: $$error = \sqrt{\sum_i (r_i - \hat{r}_i)^2 / \sum_i 1}$$ where $r_i$ is the original rating and $\hat{r}_i$ is the imputed rating, and $i$ iterates over all of the ratings you replaced with 0.
+    3.  We now wish to evaluate the quality of the collaborative filter. For each rating that you imputed, do: (original_rating - imputed_rating) ** 2. Take the mean of all of these, and then take the square root of that. This is the mean squared error evaluation: error = sqrt(mean((r_i - rhat_i)^2)) where r_i is the original rating and rhat_i is the imputed rating, and i iterates over all of the ratings you replaced with 0.
 
     HINT: Write ONE function that takes in `(N, K, D, A)` as arguments and returns the error of a collaborative filter on the MovieLens dataset. You will be able to use this function for each of the following questions.
 
