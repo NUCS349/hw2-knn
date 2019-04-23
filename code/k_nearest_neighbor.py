@@ -84,6 +84,6 @@ class KNearestNeighbor():
 
         Returns:
             labels {np.ndarray} -- Labels for each data point, of shape (n_samples,
-                n_dimensions)
+                n_features)
         """
         raise NotImplementedError()
