@@ -18,5 +18,5 @@ def test_collaborative_filtering():
         [2, 3, 1, 2, 1],
         [4, 4, 1, 4, 4]
     ])
-    predictions = collaborative_filtering(user_ratings, n_neighbors=6, aggregator='mode')
+    predictions = collaborative_filtering(user_ratings, n_neighbors=5, aggregator='mode')
     assert (np.allclose(real_ratings, predictions))
