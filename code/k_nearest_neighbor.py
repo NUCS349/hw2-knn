@@ -70,9 +70,9 @@ class KNearestNeighbor():
         training data to predict labels on the test features. For each testing sample, compare it
         to the training samples. Look at the self.n_neighbors closest samples to the 
         test sample by comparing their feature vectors. The label for the test sample
-        is the most common label among the K nearest neighbors in the training data.
+        is the determined by aggregating the K nearest neighbors in the training data.
 
-        Note that when using KNN for imputation, label has shame (1, n_features).
+        Note that when using KNN for imputation, label has shape (1, n_features).
 
         Arguments:
             features {np.ndarray} -- Features of each data point, shape of (n_samples,
