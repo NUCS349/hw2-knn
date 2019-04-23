@@ -79,8 +79,8 @@ class KNearestNeighbor():
                 n_features).
             ignore_first {bool} -- If this is True, then we ignore the closest point
                 when doing the aggregation. This is used for collaborative
-                filtering, where the closest point is itself and thus is not a neighbor. In
-                this case, we would use 1:(n_neighbors + 1).
+                filtering, where the closest point is itself and thus is not a neighbor. 
+                In this case, we would use 1:(n_neighbors + 1).
 
         Returns:
             labels {np.ndarray} -- Labels for each data point, of shape (n_samples,

@@ -28,7 +28,19 @@ def collaborative_filtering(input_array, n_neighbors,
          [1, 2]]
 
     Note that the row you are trying to impute for is ignored in the aggregation. 
-    Use `ignore_first = True` in the predict function of the KNN to accomplish this.
+    Use `ignore_first = True` in the predict function of the KNN to accomplish this. If 
+    `ignore_first = False` and K = 2, then the result would be:
+
+        [[(1 + 0) / 2 = .5, 2],
+         [1, 2],
+         [1, (2 + 0) / 2 = 1]]
+
+        = [[.5, 2],
+           [1, 2],
+           [1, 1]]
+
+    This is incorrect because the value that we are trying to replace is considered in the
+    aggregation.
 
     The non-zero values are left untouched. If aggregation is 'mode', then the output should be:
 
