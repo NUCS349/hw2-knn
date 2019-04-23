@@ -21,9 +21,9 @@ def collaborative_filtering(input_array, n_neighbors,
     We are trying to impute the 0 values by replacing the 0 values with an aggregation of the
     neighbors for that feature. If aggregation is 'mean', then the output should be:
 
-        [[.66, 1],
+        [[1, 1],
          [1, 1],
-         [1, .66]]
+         [1, 1]]
 
     The non-zero values are left untouched. If aggregation is 'mode', then the output should be:
 
