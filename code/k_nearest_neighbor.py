@@ -65,7 +65,7 @@ class KNearestNeighbor():
         raise NotImplementedError()
         
 
-    def predict(self, features, ignore_first_neighbor=False):
+    def predict(self, features, ignore_first=False):
         """Predict from features, a numpy array of size (n_samples, n_features) Use the
         training data to predict labels on the test features. For each testing sample, compare it
         to the training samples. Look at the self.n_neighbors closest samples to the 
@@ -77,9 +77,10 @@ class KNearestNeighbor():
         Arguments:
             features {np.ndarray} -- Features of each data point, shape of (n_samples,
                 n_features).
-            ignore_first_neighbor {bool} -- If this is True, then we ignore the first
-                neighbor when doing the aggregation. This is used for collaborative
-                filtering, where the first neighbor would be itself and must be ignored.
+            ignore_first {bool} -- If this is True, then we ignore the closest point
+                when doing the aggregation. This is used for collaborative
+                filtering, where the closest point is itself and thus is not a neighbor. In
+                this case, we would use 1:(n_neighbors + 1).
 
         Returns:
             labels {np.ndarray} -- Labels for each data point, of shape (n_samples,

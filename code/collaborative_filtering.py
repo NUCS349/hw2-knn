@@ -27,8 +27,8 @@ def collaborative_filtering(input_array, n_neighbors,
          [1, 2],
          [1, 2]]
 
-    Note that the row with the 0 value is ignored when aggregating. Use `ignore_first_neighbor = True`
-    in the predict function of the KNN to accomplish this.
+    Note that the row you are trying to impute for is ignored in the aggregation. 
+    Use `ignore_first = True` in the predict function of the KNN to accomplish this.
 
     The non-zero values are left untouched. If aggregation is 'mode', then the output should be:
 
