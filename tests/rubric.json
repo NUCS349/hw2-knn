@@ -7,7 +7,7 @@
         "weight": "required",
         "depends": []
     },
-    "test_k_nearest_neighbors": {
+    "test_k_nearest_neighbor": {
         "weight": 2,
         "depends": []
     },
