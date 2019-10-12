@@ -72,7 +72,8 @@ class KNearestNeighbor():
         test sample by comparing their feature vectors. The label for the test sample
         is the determined by aggregating the K nearest neighbors in the training data.
 
-        Note that when using KNN for imputation, label has shape (1, n_features).
+        Note that when using KNN for imputation, the predicted labels are the imputed testing data
+        and the shape is (n_samples, n_features).
 
         Arguments:
             features {np.ndarray} -- Features of each data point, shape of (n_samples,
