@@ -1,6 +1,6 @@
 import numpy as np
-from code import KNearestNeighbor, load_json_data
-from code import accuracy
+from src import KNearestNeighbor, load_json_data
+from src import accuracy
 import os
 
 def test_k_nearest_neighbor():

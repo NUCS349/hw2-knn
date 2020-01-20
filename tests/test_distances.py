@@ -1,5 +1,5 @@
 from sklearn.metrics.pairwise import euclidean_distances, manhattan_distances, cosine_distances
-import code
+import src
 import numpy as np
 
 def test_euclidean_distances():

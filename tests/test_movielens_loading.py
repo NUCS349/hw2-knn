@@ -1,5 +1,5 @@
 import numpy as np
-from code import load_movielens_data
+from src import load_movielens_data
 import os
 
 def test_load_movielens_data():

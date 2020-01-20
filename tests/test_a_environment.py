@@ -7,4 +7,4 @@ def test_a_imports():
     the 'a' in the file name is so this test is run first on a clean Python interpreter.
     """
     import sys
-    import code
+    import src

@@ -1,5 +1,5 @@
 import numpy as np 
-from code import collaborative_filtering
+from src import collaborative_filtering
 
 def test_collaborative_filtering():
     user_ratings = np.array([
