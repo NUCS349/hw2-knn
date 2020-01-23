@@ -85,6 +85,6 @@ class KNearestNeighbor():
 
         Returns:
             labels {np.ndarray} -- Labels for each data point, of shape (n_samples,
-                n_features)
+                n_dimensions). This n_dimensions should be the same as n_dimensions of targets in fit function.
         """
         raise NotImplementedError()
