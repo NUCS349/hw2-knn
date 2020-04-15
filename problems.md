@@ -40,9 +40,9 @@ you get 4 points here.
   
 11. (0.25 points) Now, discuss your results. What were the best settings you found for `D`, `A`, and `K`? For `D`, why do you think that distance measure worked best? For `A`, what about the best setting made it more suitable for your dataset? How did the value of `K` affect your results? Engage critically with the results of your experiments. For each graph you generated, propose an explanation for the behavior of that graph. For each table of values, propose an explanation for the variation in your results.
 
- 12. (0.25 points) Your boss gives your very large datasets. What problems do you see coming up with implementing kNN? Name a few of them.
+ 12. (0.25 points) Your boss gives you a very large dataset. What problems do you see coming up with implementing kNN? Name a few of them.
  
- 13. (0.25 points) Discuss possible solutions to the problems you have identified above.
+ 13. (0.25 points) Discuss possible solutions to the problems you have identified in question (12).
  
  14. (0.25 points) Given six training examples as ((a_i, b_i), y_i) values, where x_i and b_i are the two feature values (positive integers) and y_i is the class label: {((1,1),-1),((2, 2), −1), ((2, 8), +1), ((4, 4), +1), ((6, 5), −1), ((3, 6), −1)}. Classify the following test example at coordinates (4, 7) using a k-NNclassifier with k = 3 and Manhattan-distance defined by d((u, v), (p, q)) = |u −p| + |v −q|. Explain shortly how you came up with the answer.
  
