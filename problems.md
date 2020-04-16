@@ -46,5 +46,5 @@ you get 4 points here.
  
  14. (0.25 points) Given six training examples as ((a_i, b_i), y_i) values, where a_i and b_i are the two feature values (positive integers) and y_i is the class label: {((1,1),-1),((2, 2), −1), ((2, 8), +1), ((4, 4), +1), ((6, 5), −1), ((3, 6), −1)}. Classify the following test example at coordinates (4, 7) using a k-NNclassifier with k = 3 and Manhattan-distance defined by d((u, v), (p, q)) = |u −p| + |v −q|. Explain shortly how you came up with the answer.
  
- 15. (0.25 poins) Assume we increase k in a k-NN classifier from 1 to n, where n is the number of training examples. Discuss if the classification accuracy on the training set increases.
+ 15. (0.25 poins) Assume we increase k in a k-NN classifier from 1 to n, where n is the number of training examples. Discuss if the classification accuracy on the training set increases. Consider weighted and unweighted K-NN classifiers.
 
