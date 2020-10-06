@@ -18,10 +18,10 @@ you get 4 points here.
 
 5. (0.25 points) The MovieLens dataset contains 100k ratings on 1682 movies given by 942 users. First, explore the MovieLens data. For each pair of users, what is the mean number of movies that two users have reviewed in common? What is the median number of movies that two reviewers have reviewed in common? How would the number of movies that two users have both reviewed affect the quality of your collaborative filter? What occurs for those movies that no user has rated? 
 
-6. (0.25 points) Your boss gives you a very large dataset. What problems do you see coming up with implementing kNN? Name a few of them.
+6. (0.5 points) Your boss gives you a very large dataset. What problems do you see coming up with implementing kNN? Name a few of them.
  
-7. (0.25 points) Discuss possible solutions to the problems you have identified in question (12).
+7. (0.5 points) Discuss possible solutions to the problems you have identified in question (12).
  
-8. (0.25 points) Given six training examples as ((a_i, b_i), y_i) values, where a_i and b_i are the two feature values (positive integers) and y_i is the class label: {((1,1),-1),((2, 2), −1), ((2, 8), +1), ((4, 4), +1), ((6, 5), −1), ((3, 6), −1)}. Classify the following test example at coordinates (4, 7) using a k-NNclassifier with k = 3 and Manhattan-distance defined by d((u, v), (p, q)) = |u −p| + |v −q|. Explain shortly how you came up with the answer.
+8. (0.5 points) Given six training examples as ((a_i, b_i), y_i) values, where a_i and b_i are the two feature values (positive integers) and y_i is the class label: {((1,1),-1),((2, 2), −1), ((2, 8), +1), ((4, 4), +1), ((6, 5), −1), ((3, 6), −1)}. Classify the following test example at coordinates (4, 7) using a k-NNclassifier with k = 3 and Manhattan-distance defined by d((u, v), (p, q)) = |u −p| + |v −q|. Explain shortly how you came up with the answer.
  
-9. (0.25 poins) Assume we increase k in a k-NN classifier from 1 to n, where n is the number of training examples. Discuss if the classification accuracy on the training set increases. Consider weighted and unweighted K-NN classifiers.
+9. (0.5 poins) Assume we increase k in a k-NN classifier from 1 to n, where n is the number of training examples. Discuss if the classification accuracy on the training set increases. Consider weighted and unweighted K-NN classifiers.
