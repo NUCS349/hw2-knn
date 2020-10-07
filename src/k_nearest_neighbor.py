@@ -52,9 +52,6 @@ class KNearestNeighbor():
         variables that can be accessed in the `predict` function. Note that targets can
         be multidimensional! 
         
-        HINT: One use case of KNN is for imputation, where the features and the targets 
-        are the same. See tests/test_collaborative_filtering for an example of this.
-        
         Arguments:
             features {np.ndarray} -- Features of each data point, shape of (n_samples,
                 n_features).
