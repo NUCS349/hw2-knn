@@ -11,7 +11,7 @@ def test_k_nearest_neighbor():
     ]
 
     aggregators = ['mean', 'mode', 'median']
-    distances = ['euclidean', 'manhattan', 'cosine']
+    distances = ['euclidean', 'manhattan']
     for data_path in datasets:
         # Load data and make sure its shape is correct
         features, targets = load_json_data(data_path)
