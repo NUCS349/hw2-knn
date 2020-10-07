@@ -30,9 +30,5 @@
     "test_aggregators": {
         "weight": 1,
         "depends": []
-    },
-    "test_collaborative_filtering": {
-        "weight": 2,
-        "depends": []
     }
 }
