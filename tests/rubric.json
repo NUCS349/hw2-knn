@@ -19,10 +19,6 @@
         "weight": 1,
         "depends": []
     },
-    "test_cosine_distances": {
-        "weight": 1,
-        "depends": []
-    },
     "test_aggregators": {
         "weight": 1,
         "depends": []
