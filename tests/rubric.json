@@ -11,10 +11,6 @@
         "weight": 2,
         "depends": []
     },
-    "test_load_movielens_data": {
-        "weight": 1,
-        "depends": []
-    },
     "test_euclidean_distances": {
         "weight": 1,
         "depends": []
