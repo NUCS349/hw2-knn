@@ -16,10 +16,10 @@ you get 4.8 points here.
 
 4. (0.5 total points) Imagine we're building a *collaborative filter*, which we'll learn a lot about later in the quarter. Collaborative filters are essentially how recommendation algorithms work on sites like Amazon ("people who bought blank also bought blank") and Netflix ("you watched blank, so you might also like blank"). They work by comparing distances between users. If two users are similar, then items that one user has seen and liked but the other hasn't seen are recommended to the other user. First, frame this problem as a kNN regression problem. How are users compared to each other? (0.25 points) Given the k nearest neighbors of a user, how can these k neighbors be used to estimate the rating for a movie that the user has not seen? (0.25 points)
 
-5. (0.5 total points) Your boss gives you a very large dataset. What problems do you see coming up with implementing kNN? Name a few of them.
+5. (0.25 total points) Your boss gives you a very large dataset. What problems do you see coming up with implementing kNN? Name a few of them.
  
-6. (0.5 total points) Discuss possible solutions to the problems you have identified in Question 5.
+6. (0.25 total points) Discuss possible solutions to the problems you have identified in Question 5.
  
-7. (1.0 total point) You are given these six training examples as ((a_i, b_i), y_i) values, where a_i and b_i are the two feature values (positive integers) and y_i is the class label: {((1,1),-1),((2, 2), −1), ((2, 8), +1), ((4, 4), +1), ((6, 5), −1), ((3, 6), −1)}. Classify the following test example at coordinates (4, 7) using a kNN classifier with k = 3 and Manhattan distance defined by d((u, v), (p, q)) = |u −p| + |v −q|. (0.5 points) Explain shortly how you came up with the answer. (0.5 points)
+7. (0.5 total point) You are given these six training examples as ((a_i, b_i), y_i) values, where a_i and b_i are the two feature values (positive integers) and y_i is the class label: {((1,1),-1),((2, 2), −1), ((2, 8), +1), ((4, 4), +1), ((6, 5), −1), ((3, 6), −1)}. Classify the following test example at coordinates (4, 7) using a kNN classifier with k = 3 and Manhattan distance defined by d((u, v), (p, q)) = |u −p| + |v −q|. (0.5 points) Explain shortly how you came up with the answer. (0.5 points)
  
 8. (0.5 total points) Assume we increase k in a kNN classifier from 1 to n, where n is the number of training examples. Discuss if the classification accuracy on the training set increases. Consider weighted and unweighted KNN classifiers.
