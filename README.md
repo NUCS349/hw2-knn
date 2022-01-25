@@ -1,7 +1,12 @@
-# HW 2: k-Nearest Neighbors for EECS 349 @ NU
+# HW 2: k-Nearest Neighbors for CS 349 @ NU
 **IMPORTANT: PUT YOUR NETID IN THE FILE** `netid` in the root directory of the assignment. 
-This is used to put the autograder output into Canvas. Please don't put someone else's netid 
-here, we will check.
+This is used to put the autograder output into Canvas. Please don't put someone else's NetID 
+here, we will check. The NetID should be placed into that file by itself as the only line, 
+with lower case letters and no carriage returns. 
+
+The line that is marked NETID_GOES_HERE should be **REPLACED** with YOUR NetID.
+
+**IF YOU DON'T PUT YOUR NETID INTO THAT FILE PROPERLY YOU WILL NOT RECIEVE CREDIT FOR YOUR WORK!**
 
 ## Clone this repository
 
@@ -30,7 +35,3 @@ The test cases can be run with:
 ``python -m pytest -s``
 
 at the root directory of the assignment repository.
-
-## Questions? Problems? Issues?
-
-Simply open an issue on the starter code repository for this assignment [here](https://github.com/nucs349/hw3-knn/issues). Someone from the teaching staff will get back to you through there!
