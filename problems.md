@@ -25,4 +25,4 @@ Your score for this section is defined by the autograder. If it says you got an 
     1. (0.5 points) Classify the following test example at coordinates (4, 7) using a kNN classifier with k = 3 and Manhattan distance defined by d((u, v), (p, q)) = |u − p| + |v − q|.
     1. (0.5 points) Explain in short how you came up with the answer.
  
-1. (0.5 points) Assume we increase k in a kNN classifier from 1 to n, where n is the number of training examples. Discuss if the classification accuracy on the training set increases. Consider weighted and unweighted KNN classifiers.
+1. (0.5 points) Assume we increase k in a kNN classifier from 1 to n, where n is the number of training examples. Discuss if the classification accuracy on the training set increases. Consider weighted and unweighted kNN classifiers.
