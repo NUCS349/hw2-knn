@@ -21,7 +21,7 @@ Your score for this section is defined by the autograder. If it says you got an 
  
 1. (0.5 points) Discuss possible solutions to the problems you have identified in Question 5.
  
-1. (1.0 total point) You are given these six training examples as ((a_i, b_i), y_i) values, where a_i and b_i are the two feature values (positive integers) and y_i is the class label: {((1,1),-1),((2, 2), −1), ((2, 8), +1), ((4, 4), +1), ((6, 5), −1), ((3, 6), −1)}.
+1. You are given these six training examples as ((a_i, b_i), y_i) values, where a_i and b_i are the two feature values (positive integers) and y_i is the class label: {((1,1),-1),((2, 2), −1), ((2, 8), +1), ((4, 4), +1), ((6, 5), −1), ((3, 6), −1)}.
     1. (0.5 points) Classify the following test example at coordinates (4, 7) using a kNN classifier with k = 3 and Manhattan distance defined by d((u, v), (p, q)) = |u −p| + |v −q|.
     1. (0.5 points) Explain shortly how you came up with the answer.
  
